@@ -25,6 +25,6 @@ Install Argos as usual, then replace the `menuitem.js` file:
 
 ```bash
 cd ~/.local/share/gnome-shell/extensions/argos@pew.worldwidemann.com
-wget --output-document=menuitem.js https://github.com/rammie/argos/blob/gnome-3.36/argos%40pew.worldwidemann.com/menuitem.js
+wget --output-document=menuitem.js https://raw.githubusercontent.com/rammie/argos/gnome-3.36/argos%40pew.worldwidemann.com/menuitem.js
 ```
 Then, hit Alt+F2 and enter `r` to restart the Gnome Shell.
