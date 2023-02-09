@@ -21,6 +21,6 @@ fi
 
 echo "${CONNECTION_NAME} | iconName=${ICON}"
 echo "---"
-echo "Connect | iconName=${CONNECTED_ICON} bash='nmcli connection up ${CONNECTION_NAME}' terminal=false refresh=true"
-echo "Disconnect | iconName=${DISCONNECTED_ICON} bash='nmcli connection down ${CONNECTION_NAME}' terminal=false refresh=true"
+echo "Connect | iconName=${CONNECTED_ICON} bash='nmcli connection up \"${CONNECTION_NAME}\"' terminal=false refresh=true"
+echo "Disconnect | iconName=${DISCONNECTED_ICON} bash='nmcli connection down \"${CONNECTION_NAME}\"' terminal=false refresh=true"
 
