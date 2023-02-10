@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-if [ -z "$1" ]; then
+set -o errexit
+set -o nounset
+set -o pipefail
+
+if [ -z "${1-}" ]; then # substitute with empty string if not set
   echo Connection name is required as first argument
   exit 1
 fi
