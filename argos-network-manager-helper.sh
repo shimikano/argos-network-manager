@@ -11,6 +11,12 @@ fi
 
 CONNECTION_NAME="$1"
 
+if [ -z "${2-}" ]; then # substitute with empty string if not set
+  LABEL="$CONNECTION_NAME" # use the connection name if empty
+else
+  LABEL="$2"
+fi
+
 CONNECTED_ICON=security-high-symbolic
 DISCONNECTED_ICON=security-medium-symbolic
 
@@ -20,7 +26,7 @@ else
   ICON=${DISCONNECTED_ICON}
 fi
 
-echo "${CONNECTION_NAME} | iconName=${ICON}"
+echo "${LABEL} | iconName=${ICON}"
 echo "---"
 echo "Connect | iconName=${CONNECTED_ICON} bash='nmcli connection up \"${CONNECTION_NAME}\"' terminal=false refresh=true"
 echo "Disconnect | iconName=${DISCONNECTED_ICON} bash='nmcli connection down \"${CONNECTION_NAME}\"' terminal=false refresh=true"
